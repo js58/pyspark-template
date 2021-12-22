@@ -1,0 +1,2 @@
+-r prod.txt
+pex==2.1.60

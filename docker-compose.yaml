@@ -1,0 +1,15 @@
+version: '3'
+services:
+  spark-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark-app
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    environment:
+      - PYTHONPATH=/opt/application
+    tty: true
+    volumes:
+      - .:/opt/application
